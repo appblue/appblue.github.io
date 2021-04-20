@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the page</title>
+
+    <link href="/css/darcula.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            /* min-height: 25rem; */
+            padding-top: 4.5rem;
+        }
+        .floating-card {
+            float: left;
+            margin: 5px;
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="background-color: #135;border-radius:5px">AppBlue</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/tags">Tags</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container">
+        <main class="container">
+    <div class="bg-light p-5 rounded">
+        <h1>Blog meets tech ...</h1>
+        <p class="lead">This page serves as my personal notepad for mostly technical topics with some hope that maybe others will find the information contained here useful.</p>
+        <a class="btn btn-lg btn-primary" href="about/" role="button">Read more about the content &raquo;</a>
+    </div>
+
+    <h3>Recent Posts</h3><div class="card floating-card" style="width: 18rem;">
+            <!-- <img src="a.png" class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h5 class="card-title"> PGI and MacOS X</h5>
+                <p class="card-text" style="height: 5rem;">How to make PGI compiler work on Mac OS X Catalina</p>
+                <a href="/posts/general/pgi-macosx/" class="btn btn-primary">Read it</a>
+            </div>
+        </div><div class="card floating-card" style="width: 18rem;">
+            <!-- <img src="a.png" class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h5 class="card-title"> Reverse Engineering Amiga</h5>
+                <p class="card-text" style="height: 5rem;">How to approach reverse engineering project for Amiga demos.</p>
+                <a href="/posts/amiga/reversing/" class="btn btn-primary">Read it</a>
+            </div>
+        </div><div class="card floating-card" style="width: 18rem;">
+            <!-- <img src="a.png" class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h5 class="card-title"> UAE Snapshot Format</h5>
+                <p class="card-text" style="height: 5rem;">Short introduction to the format of the snapshot files produced by UAE</p>
+                <a href="/posts/amiga/winuae/" class="btn btn-primary">Read it</a>
+            </div>
+        </div></main>
+    </div>
+
+</body>
+
+</html>

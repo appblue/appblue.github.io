@@ -1,0 +1,27 @@
+---
+title: the page
+layout: base.njk
+---
+<main class="container">
+    <div class="bg-light p-5 rounded">
+        <h1>Blog meets tech ...</h1>
+        <p class="lead">This page serves as my personal notepad for mostly technical topics with some hope that maybe others will find the information contained here useful.</p>
+        <a class="btn btn-lg btn-primary" href="about/" role="button">Read more about the content &raquo;</a>
+    </div>
+
+    <h3>Recent Posts</h3>
+
+     {%- for post in collections.blog | reverse | head(3) -%}
+
+        <div class="card floating-card" style="width: 18rem;">
+            <!-- <img src="a.png" class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h5 class="card-title"> {{ post.data.title }}</h5>
+                <p class="card-text" style="height: 5rem;">{{ post.data.description }}</p>
+                <a href="{{ post.url }}" class="btn btn-primary">Read it</a>
+            </div>
+        </div>
+        
+    {%- endfor -%}    
+
+</main>

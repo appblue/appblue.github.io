@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <link href="/css/darcula.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            /* min-height: 25rem; */
+            padding-top: 4.5rem;
+        }
+        .floating-card {
+            float: left;
+            margin: 5px;
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+{% include 'nav.njk' %}
+
+    <div class="container">
+        {{ content | safe }}
+    </div>
+
+</body>
+
+</html>
