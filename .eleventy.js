@@ -5,6 +5,7 @@ module.exports = function (config) {
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy("src/js");
   config.addPassthroughCopy("src/css");
+  config.addPassthroughCopy("src/img");
 
   // https://www.11ty.dev/docs/data-deep-merge/
   config.setDataDeepMerge(true);
@@ -12,8 +13,7 @@ module.exports = function (config) {
   // add all *.md files from the 'src/posts' folder to the blog collection
   config.addCollection('blog', collection =>
     collection
-      .getFilteredByGlob([
-        './src/posts/**/*.md'])
+      .getFilteredByGlob(['./src/posts/**/*.md'])
       .filter(p => (!p.data.draft && p.date <= Date.now()))
   );
 
