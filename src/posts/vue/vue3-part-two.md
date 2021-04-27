@@ -313,8 +313,6 @@ Because we’re now displaying that event list on what used to be our “Home”
 
 As our app currently stands, the events that we’re displaying are simply hard-coded within the data of the EventList.vue component. In a real-world app, there would likely be some sort of database of events that we would be pulling from. Our app would make a request for the events, the server would respond with those events (as JSON), and we’d take those events and set them as our component’s data, which we then display in the view.
 
-https://firebasestorage.googleapis.com/v0/b/vue-mastery.appspot.com/o/flamelink%2Fmedia%2F1.opt.1605053999987.jpg?alt=media&token=0ae8fd12-5843-459c-a2b4-41785bee9d39
-
 So our tasks in this lesson include:
 
 Create a mock database to house our events
@@ -983,8 +981,6 @@ As you can see, we’re able to deploy a Static Site served over a global CDN wi
 
 We’ll select this Static Site option to deploy our Vue app with Render, which prompts us to select a repo for the site that we want to deploy. Since we haven’t yet connected any repos to our Render account, we’ll click on the “Github” link to do so. If you’re not already logged into Github, you’ll sign in to install Render within your Github account and select the repo you’d like to connect.
 
-IMPORTANT: In order to follow along with these steps, you’ll need to fork the Vue Mastery course repo to your personal Github account. That way, you’ll be able to connect the forked repo at this step.
-
 Upon clicking install, you’ll be redirected back to Render, where you should now see that newly connected repo showing up.
 
 Now we’re ready to select that repo and deploy it as a static site, which is a very straightforward process. As the page intelligently says: “You seem to be using Vue.js, so we’ve autofilled some fields accordingly.”
@@ -1038,42 +1034,6 @@ Under the Pull Request tab, you can enable pull requests and Render will automat
 
 Speaking of collaboration, you can also create and work within teams on Render, which an individual account holder can create from their dropdown here:
 
-### Render scales with you
-As your app scales, perhaps with a more robust backend or some server-side rendering, you can scale up your Render services, too—horizontally (add more instances of a service) or vertically (add more CPU and RAM to an instance)—with features including:
-
-Web services
-Managed PostgreSQL databases
-Cron jobs
-Private services
-Background workers
-And you can choose from several environments:
-
-Docker
-Node
-Ruby
-Go
-Elixir
-Python
-Rust
-
-A Helpful Community Forum
-If you ever get stuck while using Render, they also have a community form that can help you get unstuck. In fact, they’ve even created a “Vue Mastery” category to address any issues you may run into while following this lesson.
-
-### What’s next?
-Now that we’ve finished coding our app and deployed it out into the wild, where do we go from here? There are many more features to add and concepts to unpack, and in our next lesson we’ll take a look at the different ways we can take this app to the next level. See you there!
-
-Please note that Vue Mastery is an affiliate of Render. As our subscribers choose to use their services, our work at Vue Mastery receives compensation, a percentage of which is given back to support the Vue.js framework.
-
-## Scaling the app
-We’ve reached the final lesson of this course, and I want to congratulate you for following along until the end. We’ve built a simple yet solid Vue app and deployed it out into the world. So where do we go from here? There are a number of features we could add, and additional concepts within the Vue framework (and ecosystem of tools) to learn. So what should a Vue developer master next?
-
-In this lesson, I’m going to give a tour of what potential next steps we could take to scale up our app in different directions. This will simultaneously provide some guidance around how to continue with your Vue learning journey and how to best utilize the Vue Mastery platform to level up your skills.
-
-### What’s next?
-If you take a look at our courses page, you’ve probably already noticed we have our library of content arranged in different paths. These paths are arranged in the suggested order for consuming our courses. Having said that, your ideal next course ultimately depends on your current needs and pressing interests.
-
-So let’s explore some of the main Vue concepts and how a number of our course addresses them.
-
 ### Vue 3 Forms
 
 If we continued building out our Events for Good app beyond this course, we’d need a production-ready form that enables users to create new events. Forms are arguably one of the most important parts of any app, allowing us to intake important information from our users. A well done form (or a poorly done form) can ultimately affect a company’s bottom line in significant ways.
@@ -1103,7 +1063,3 @@ So if your app needs features like pagination, guards on certain routes that lim
 ### Beyond the beginner’s path
 
 If you take the courses outlined so far, you’ll have broadened and reinforced your knowledge of fundamental production-level Vue practices. You’ll then be ready for our more intermediate courses that cover everything from strengthening your Vue apps with Unit Testing, to adding User Authentication, and integrating with popular libraries within the Vue.js ecosystem such as Nuxt.js and Vuetify.
-
-### You’ve made it
-With that, I hope you feel clear about what your next steps are on your path to Vue Mastery. I wish you well as you level up your skills and expand the opportunities that become available to you as you become increasingly skilled with this powerful JavaScript framework. See you in another course!
-
