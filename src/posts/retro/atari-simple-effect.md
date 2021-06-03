@@ -33,7 +33,7 @@ Video Mode: 336x240x32 windowed without vsync
 
 ## The code
 
-```
+```text
         org $2000
 
         .zpvar increment, counter .byte = $00
