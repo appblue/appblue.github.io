@@ -1,40 +1,66 @@
----
-title: Simple effect for Atari 800 
-description: How to assemble and run simple effect on Atari 800
-author: Krzysztof Kielak
-date: 2021-06-03
-draft: false
-tags:
-  - 6502 atari
----
+<!DOCTYPE html>
+<html lang="en">
 
-## Introduction
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple effect for Atari 800</title>
 
-The code presented below depends on the following tools:
+    <link href="/css/darcula.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-* Atari800 emulator (in my case available in Manjaro's AUR repository)
-* MADS assembler (compiled from sources using Free Pascal Compiler)
+    <script src="/js/bootstrap.bundle.min.js"></script>
 
-To assemble and run the code in emulator, please execute following commands (in case of Linux host system):
+    <style>
+        body {
+            /* min-height: 25rem; */
+            padding-top: 4.5rem;
+        }
+        .floating-card {
+            float: left;
+            margin: 5px;
+            max-width: 300px;
+        }
+    </style>
+</head>
 
-```shell
-$ mads -l ex01.asm && atari800 ex01.obx
-Writing listing file...
-Writing object file...
-137 lines of source assembled in 3 pass
-310 bytes written to the object file
-Using Atari800 config file: /home/kris/.atari800.cfg
-Created by Atari 800 Emulator, Version 4.2.0
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="background-color: #135;border-radius:5px">AppBlue</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/tags">Tags</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-Joystick 0 found
-Requested resolution 336x240 is not available, using 640x480 instead.
-Video Mode: 336x240x32 windowed without vsync
-```
-
-## The code
-
-```
-        org $2000
+    <div class="container">
+        <h1>Simple effect for Atari 800</h1>
+        <h2>Introduction</h2>
+<p>The code presented below depends on the following tools:</p>
+<ul>
+<li>Atari800 emulator (in my case available in Manjaro's AUR repository)</li>
+<li>MADS assembler (compiled from sources using Free Pascal Compiler)</li>
+</ul>
+<p>To assemble and run the code in emulator, please execute following commands (in case of Linux host system):</p>
+<pre class="language-shell"><code class="language-shell">$ mads -l ex01.asm <span class="token operator">&amp;&amp;</span> atari800 ex01.obx<br>Writing listing file<span class="token punctuation">..</span>.<br>Writing object file<span class="token punctuation">..</span>.<br><span class="token number">137</span> lines of <span class="token builtin class-name">source</span> assembled <span class="token keyword">in</span> <span class="token number">3</span> pass<br><span class="token number">310</span> bytes written to the object <span class="token function">file</span><br>Using Atari800 config file: /home/kris/.atari800.cfg<br>Created by Atari <span class="token number">800</span> Emulator, Version <span class="token number">4.2</span>.0<br><br>Joystick <span class="token number">0</span> found<br>Requested resolution 336x240 is not available, using 640x480 instead.<br>Video Mode: 336x240x32 windowed without vsync</code></pre>
+<h2>The code</h2>
+<pre><code>        org $2000
 
         .zpvar increment, counter .byte = $00
 
@@ -171,4 +197,9 @@ tab:    .byte 30, 30, 31, 31, 32, 32, 33, 33, 34, 34, 35, 35, 36, 36, 37
 ; - - - - - - - - - - - - 
         run start  
 ; - - - - - - - - - - - - 
-```
+</code></pre>
+
+    </div>
+
+</body>
+</html>
